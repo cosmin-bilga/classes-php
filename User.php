@@ -133,9 +133,9 @@ class User
         if (!$this->isConnected())
             return;
         try {
-            $sql = "UPDATE utilisateurs SET login=? , password=?, email=?, firstname=?, lastname=? WHERE login=?;";
+            $sql = "UPDATE utilisateurs SET login=? , password=?, email=?, firstname=?, lastname=? WHERE id=?;";
             $stmt = $this->conn->prepare($sql);
-            $stmt->bind_param("ssssss", $login, $password, $email, $firstname, $lastname, $this->login);
+            $stmt->bind_param("ssssss", $login, $password, $email, $firstname, $lastname, $this->id);
             $stmt->execute();
         } catch (mysqli_sql_exception $e) {
             echo $e->getMessage();

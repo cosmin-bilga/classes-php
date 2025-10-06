@@ -2,14 +2,14 @@
 include "user.php";
 include "user-pdo.php";
 
-$user = new User();
-//$user = new Userpdo();
+//$user = new User();
+$user = new Userpdo();
 
 
-print_r($user->register("Amine", "mdp", "amine@example.com", "Vlad", "Bilga"));
-$user->connect('Amine', 'mdp');
+//print_r($user->register("Perry", "mdp", "perry@example.com", "Vlad", "Bilga"));
+$user->connect('Perry', 'mdp');
 print_r($user->getAllInfos());
-$user->update("Amine2", "mdp", "amine@example.com", "Vlad", "Bilga");
+$user->update("Perry2", "mdp", "Perry@example.com", "Vlad", "Bilga");
 echo $user->getLogin();
 echo $user->getEmail();
 echo $user->getFirstname();

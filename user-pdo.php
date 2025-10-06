@@ -117,7 +117,7 @@ class Userpdo
     public function update(string $login, string $password, string $email, string $firstname, string $lastname): void
     {
         try {
-            $sql = "UPDATE utilisateurs SET login=:login , password=:password, email=:email, firstname=:firstname, lastname=:lastname WHERE login=:curr_login;";
+            $sql = "UPDATE utilisateurs SET login=:login , password=:password, email=:email, firstname=:firstname, lastname=:lastname WHERE id=:curr_id;";
             $stmt = $this->conn->prepare($sql);
             $stmt->execute([
                 ':login' => $login,
@@ -125,7 +125,7 @@ class Userpdo
                 ':email' => $email,
                 ':firstname' => $firstname,
                 ':lastname' => $lastname,
-                ':curr_login' => $this->login,
+                ':curr_id' => $this->id,
             ]);
         } catch (PDOException $e) {
             echo $e->getMessage();
