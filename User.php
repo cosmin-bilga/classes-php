@@ -34,6 +34,7 @@ class User
         if ($this->conn->connect_errno) {
             die("Connection to database failed: " . $this->conn->connect_error);
         }
+        //disconnect remet à 0 tous les variables de l'objet, on l'utilise pour initialiser
         $this->disconnect();
     }
 
@@ -191,7 +192,7 @@ class User
     /**
      * Retourne le firstname de l’utilisateur
      */
-    public function getFirstName(): string
+    public function getFirstname(): string
     {
         return $this->firstname;
     }
@@ -199,7 +200,7 @@ class User
     /**
      * Retourne le lastname de l’utilisateur
      */
-    public function getLastName(): string
+    public function getLastname(): string
     {
         return $this->lastname;
     }

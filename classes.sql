@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3307
--- Generation Time: Oct 01, 2025 at 02:10 PM
+-- Generation Time: Oct 06, 2025 at 06:53 AM
 -- Server version: 11.5.2-MariaDB
 -- PHP Version: 8.3.14
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `login` (`login`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `utilisateurs`
@@ -49,7 +49,9 @@ INSERT INTO `utilisateurs` (`id`, `login`, `password`, `email`, `firstname`, `la
 (5, 'Vlad', 'mdp', 'vlad@example.com', 'Vlad', 'Bilga'),
 (6, 'Dodo2', 'mdp', 'dodo@example.com', 'dodo', 'dodo'),
 (7, 'Vlad3', 'mdp', 'vlad3@example.com', 'Vlad', 'Bilga'),
-(8, 'Clad3', 'mdp', 'clad3@example.com', 'Vlad', 'Bilga');
+(8, 'Clad3', 'mdp', 'clad3@example.com', 'Vlad', 'Bilga'),
+(9, 'Clad2', 'mdp', 'clad2@example.com', 'Vlad', 'Bilga'),
+(10, 'Amine2', 'mdp', 'amine@example.com', 'Vlad', 'Bilga');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -198,7 +198,7 @@ class Userpdo
     /**
      * Retourne le firstname de l’utilisateur
      */
-    public function getFirstName(): string
+    public function getFirstname(): string
     {
         return $this->firstname;
     }
@@ -206,7 +206,7 @@ class Userpdo
     /**
      * Retourne le lastname de l’utilisateur
      */
-    public function getLastName(): string
+    public function getLastname(): string
     {
         return $this->lastname;
     }
